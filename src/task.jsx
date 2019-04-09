@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Draggable } from 'react-beautiful-dnd';
 import styled from 'styled-components';
 
@@ -10,7 +10,7 @@ const Container = styled.div`
    background-color: #fff;
 `;
 
-export default class Task extends React.Component {
+export default class Task extends Component {
    render() {
       return (
          <Draggable draggableId={this.props.task.id} index={this.props.index}>

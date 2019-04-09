@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Droppable } from 'react-beautiful-dnd';
 import styled from 'styled-components';
 import Task from './task';
@@ -17,14 +17,15 @@ const TaskList = styled.div`
    padding: 8px;
 `;
 
-export default class Column extends React.Component {
+export default class Column extends Component {
    render() {
       console.log(this.props);
       return (
          <Container>
             <Title>{this.props.column.title}</Title>
             <Droppable droppableId={this.props.column.id}>
-               {(provided) => (
+               { // "provided" is an object that serves purposes. Droppable children expects to return a component
+                  (provided) => (
                   <TaskList
                      innerRef={provided.innerRef}
                      {...provided.droppableProps}

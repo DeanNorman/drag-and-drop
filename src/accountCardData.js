@@ -1,4 +1,4 @@
-const accountCardData = {
+ const accountCardData = {
    tasks: {
       'account-1': { id: 'account-1', content: 'Cheque Account'},
       'account-2': { id: 'account-2', content: 'Equity Fund'},
