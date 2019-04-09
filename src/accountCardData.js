@@ -1,15 +1,17 @@
  const accountCardData = {
    tasks: {
-      'account-1': { id: 'account-1', content: 'Cheque Account'},
-      'account-2': { id: 'account-2', content: 'Equity Fund'},
-      'account-3': { id: 'account-3', content: 'Savings Account'},
-      'account-4': { id: 'account-4', content: 'Manual Account'},
-   },
+      'account-1': { id: 'account-1', content: 'Cheque Account', value: 300 },
+      'account-2': { id: 'account-2', content: 'Equity Fund', value: 5000 },
+      'account-3': { id: 'account-3', content: 'Savings Account', value: 323},
+      'account-4': { id: 'account-4', content: 'Manual Account', value: -990},
+      'account-5': { id: 'account-5', content: 'Old Mutual', value: 404},
+      'account-6': { id: 'account-6', content: 'Nedbank ', value: 40.000 },
+   }, 
    columns: {
       'column-1': {
          id: 'column-1',
          title: 'Unsorted Accounts',
-         taskIds: ['account-1', 'account-2', 'account-3', 'account-4'],
+         taskIds: ['account-1', 'account-2', 'account-3', 'account-4', 'account-5', 'account-6'],
       },
    },
    // for future sorting

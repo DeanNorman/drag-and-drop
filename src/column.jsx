@@ -16,6 +16,9 @@ const Title = styled.h3`
 const TaskList = styled.div`
    padding: 8px;
    display: flex;
+   flex-wrap: wrap;
+   align-content: flex-start;
+   justify-content: space-around;
 `;
 
 export default class Column extends Component {
