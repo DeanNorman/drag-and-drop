@@ -5,7 +5,7 @@ import Task from './task';
 
 const Container = styled.div`
    margin: 8px;
-   border: 1px solid lightgrey;
+   /* border: 1px solid lightgrey; */
    border-radius: 2px;
 `;
 
@@ -26,7 +26,7 @@ export default class Column extends Component {
       console.log(this.props);
       return (
          <Container>
-            <Title>{this.props.column.title}</Title>
+            {/* <Title>{this.props.column.title}</Title> */}
             <Droppable droppableId={this.props.column.id} direction="horizontal">
                { // "provided" is an object that serves purposes. Droppable children expects to return a component
                   (provided) => (
