@@ -15,6 +15,7 @@ const Title = styled.h3`
 
 const TaskList = styled.div`
    padding: 8px;
+   display: flex;
 `;
 
 export default class Column extends Component {
@@ -23,7 +24,7 @@ export default class Column extends Component {
       return (
          <Container>
             <Title>{this.props.column.title}</Title>
-            <Droppable droppableId={this.props.column.id}>
+            <Droppable droppableId={this.props.column.id} direction="horizontal">
                { // "provided" is an object that serves purposes. Droppable children expects to return a component
                   (provided) => (
                   <TaskList
@@ -31,7 +32,8 @@ export default class Column extends Component {
                      {...provided.droppableProps}
                   >
                      {this.props.tasks.map( (task, index) => <Task key={task.id} task={task} index={index} />)}
-                     {provided.placeholder}
+                     { // This is used to increase the avail space when items are being moved.
+                        provided.placeholder}
                   </TaskList>
                )}
             </Droppable>

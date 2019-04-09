@@ -8,8 +8,11 @@ const Container = styled.div`
    padding: 8px;
    margin-bottom: 8px;
    background-color: #fff;
+   display: flex;
+   justify-content: center;
+   
 `;
-
+// Dont change the shape of your draggable on drag 
 export default class Task extends Component {
    render() {
       return (
