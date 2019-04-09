@@ -4,6 +4,9 @@ import styled from 'styled-components';
 
 
 const Card = styled.div`
+   position: relative;
+   flex-grow: 1;
+   margin: 10px;
    border: 1px solid lightgrey;
    border-radius: 5px;
    padding: 8px;
@@ -29,7 +32,15 @@ const CardContent = styled.div`
 `;
 const Name = styled.div``;
 const Value = styled.div``;
-const Status = styled.div``
+const Status = styled.div``;
+const Handle = styled.div`
+   position: absolute;
+   top: 5px;
+   right: 5px;
+   width: 20px;
+   height: 20px;
+   background-color: red;
+`;
 // Dont change the shape of your draggable on drag 
 export default class Task extends Component {
    render() {
@@ -38,7 +49,7 @@ export default class Task extends Component {
             {(provided) => (
                <Card
                   {...provided.draggableProps}
-                  {...provided.dragHandleProps}
+                  // {...provided.dragHandleProps}
                   innerRef={provided.innerRef}
                >
                   <Icon />
@@ -47,12 +58,13 @@ export default class Task extends Component {
                         {this.props.task.content}
                      </Name>
                      <Value>
-                     {this.props.task.value}
+                        {this.props.task.value}
                      </Value>
                      <Status>
                         Updated 1 day ago
                      </Status>
                   </CardContent>
+                  <Handle {...provided.dragHandleProps} />
                </Card>
             )}
             
